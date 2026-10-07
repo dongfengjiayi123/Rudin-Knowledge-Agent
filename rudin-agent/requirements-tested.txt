@@ -1,0 +1,9 @@
+# Direct dependencies used for validation in Python 3.12.
+# Prefer pyproject.toml unless exact reproduction is required.
+fastapi==0.142.2
+uvicorn==0.54.0
+httpx==0.28.1
+mcp==1.30.0
+python-dotenv==1.2.4
+pytest==9.1.1
+pymupdf==1.26.6

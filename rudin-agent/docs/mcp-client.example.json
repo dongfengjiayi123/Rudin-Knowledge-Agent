@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rudin-knowledge": {
+      "command": "C:/YOUR_PATH/rudin-agent/.venv/Scripts/python.exe",
+      "args": ["-m", "rudin_agent.mcp_server"],
+      "cwd": "C:/YOUR_PATH/rudin-agent",
+      "env": {
+        "PYTHONPATH": "C:/YOUR_PATH/rudin-agent",
+        "RUDIN_DB": "C:/YOUR_PATH/rudin-agent/data/knowledge.db"
+      }
+    }
+  }
+}

@@ -1,0 +1,1790 @@
+{
+  "nodes": [
+    {
+      "id": "1.7",
+      "ref": "1.7",
+      "kind": "definition",
+      "chapter": 1,
+      "title": "上界与下界",
+      "aliases": [
+        "upper",
+        "bound",
+        "lower",
+        "bound"
+      ],
+      "statement": "在有序集 S 中，E⊂S。若存在 β∈S，使所有 x∈E 都满足 x≤β，则 β 是 E 的上界，E 称为有上界；下界和有下界类似定义。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 15,
+        "pdf_end": 15,
+        "printed_page": 3
+      },
+      "raw": "1.7 Definition. Suppose S is an ordered set, and E ⊂S. If there exists a β ∈S such\nthat x ≤β for every x ∈E, we say that E is bounded above, and call β an upper bound\nof E.\nLower bounds are defined the same way (with ≥in place of ≤)."
+    },
+    {
+      "id": "1.8",
+      "ref": "1.8",
+      "kind": "definition",
+      "chapter": 1,
+      "title": "上确界与下确界",
+      "aliases": [
+        "supremum",
+        "infimum"
+      ],
+      "statement": "设 E 是有序集 S 的有上界子集。α=sup E 当且仅当 α 是上界，且任意 γ<α 都不是 E 的上界。下确界是最大的下界。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 15,
+        "pdf_end": 16,
+        "printed_page": 3
+      },
+      "raw": "1.8 Definition. Suppose S is an ordered set, E ⊂S, and E is bounded above. Sup-\npose there exists an α ∈S with the following properties:\n(i) α is an upper bound of E.\n(ii) If γ < α then γ is not an upper bound of E.\nThen α is called the least upper bound of E [that there is at most one such α is clear\nfrom (ii)] or the supremum of E, and we write\nα = sup E.\n\nORDERED SETS\n4\nThe greatest lower bound, or infimum, of a set E which is bounded below is defined\nin the same manner: The statement\nα = inf E\nmeans that α is a lower bound of E and that no β with β > α is a lower bound\nof E."
+    },
+    {
+      "id": "1.10",
+      "ref": "1.10",
+      "kind": "definition",
+      "chapter": 1,
+      "title": "最小上界性质",
+      "aliases": [
+        "least",
+        "upper",
+        "bound",
+        "property",
+        "completeness"
+      ],
+      "statement": "有序集 S 具有最小上界性质，是指每个非空、有上界的 E⊂S，都存在属于 S 的 sup E。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 16,
+        "pdf_end": 16,
+        "printed_page": 4
+      },
+      "raw": "1.10 Definition. An ordered set S is said to have the least-upper-bound property if\nthe following is true:\nIf E ⊂S, E is not empty, and E is bounded above, then sup E exists in S.\nExample 1.9(a) shows that Q does not have the least-upper-bound property.\nWe shall now show that there is a close relation between greatest lower bounds\nand least upper bounds, and that every ordered set with the least-upper-bound\nproperty also has the greatest-lower-bound property."
+    },
+    {
+      "id": "1.19",
+      "ref": "1.19",
+      "kind": "theorem",
+      "chapter": 1,
+      "title": "实数域的存在",
+      "aliases": [
+        "real",
+        "field",
+        "completeness"
+      ],
+      "statement": "存在具有最小上界性质的有序域 ℝ；并且它包含一个与有理数域 ℚ 同构的子域。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 20,
+        "pdf_end": 20,
+        "printed_page": 8
+      },
+      "raw": "1.19 Theorem. There exists an ordered field R which has the least-upper-bound property.\nMoreover, R contains Q as a subfield.\nThe second statement means that Q ⊂R and that the operations of addition\nand multiplication in R, when applied to members of Q, coincide with the usual\noperations on rational numbers; also, the positive rational numbers are positive\nelements of R. The members of R are called real numbers.\nThe proof of Theorem 1.19 is rather long and a bit tedious and is therefore\npresented in an Appendix to Chap. 1. The proof actually constructs R from Q.\nThe next theorem could be extracted from this construction with very little ex-\ntra effort. However, we prefer to derive it from Theorem 1.19 since this provided a\ngood illustration of what one can do with the least-upper-bound property."
+    },
+    {
+      "id": "2.15",
+      "ref": "2.15",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "度量空间",
+      "aliases": [
+        "metric",
+        "space",
+        "distance"
+      ],
+      "statement": "集合 X 配有函数 d:X×X→ℝ，满足：d(p,q)≥0，且 d(p,q)=0 当且仅当 p=q；d(p,q)=d(q,p)；d(p,q)≤d(p,r)+d(r,q)。这样的 (X,d) 称为度量空间。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 40,
+        "pdf_end": 40,
+        "printed_page": 28
+      },
+      "raw": "2.15 Definition. A set X, whose elements we shall call points, is said to be a metric\nspace if with any two points p and q of X there is associated a real number d(p, q),\ncalled the distance from p to q, such that\n(a) d(p, q) > 0 if p ̸= q; d(p, p) = 0;\n(b) d(p, q) = d(q, p);\n(c) d(p, q) ≤d(p, r) + d(r, q) for any r ∈X.\nAny function with these three properties is called a distance function, or a metric."
+    },
+    {
+      "id": "2.18.a",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "邻域",
+      "aliases": [
+        "neighborhood",
+        "open",
+        "ball"
+      ],
+      "statement": "在度量空间 X 中，点 p 的半径 r>0 的邻域是 Nᵣ(p)={q∈X:d(p,q)<r}。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.b",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "聚点",
+      "aliases": [
+        "limit",
+        "point",
+        "accumulation",
+        "point"
+      ],
+      "statement": "p 是 E⊂X 的聚点，当且仅当 p 的每个邻域都包含某个 q∈E，且 q≠p。聚点不必属于 E。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.c",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "孤立点",
+      "aliases": [
+        "isolated",
+        "point"
+      ],
+      "statement": "若 p∈E 且 p 不是 E 的聚点，则 p 是 E 的孤立点。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.d",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "闭集",
+      "aliases": [
+        "closed",
+        "set"
+      ],
+      "statement": "E⊂X 是闭集，当且仅当 E 的每个聚点都属于 E。闭性相对于所在的度量空间 X 而言。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.e",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "内点",
+      "aliases": [
+        "interior",
+        "point"
+      ],
+      "statement": "p 是 E 的内点，当且仅当存在 r>0，使 Nᵣ(p)⊂E。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.f",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "开集",
+      "aliases": [
+        "open",
+        "set"
+      ],
+      "statement": "E⊂X 是开集，当且仅当 E 的每个点都是 E 的内点。开性取决于环境空间 X。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.g",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "补集",
+      "aliases": [
+        "complement"
+      ],
+      "statement": "E 在 X 中的补集是 Eᶜ={p∈X:p∉E}。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.h",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "完美集",
+      "aliases": [
+        "perfect",
+        "set"
+      ],
+      "statement": "E 是完美集，当且仅当 E 是闭集，且 E 的每个点都是 E 的聚点。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.i",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "有界集",
+      "aliases": [
+        "bounded",
+        "set"
+      ],
+      "statement": "E⊂X 有界，是指存在实数 M 和 q∈X，使所有 p∈E 都有 d(p,q)<M。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.18.j",
+      "ref": "2.18",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "稠密集",
+      "aliases": [
+        "dense",
+        "set"
+      ],
+      "statement": "E 在 X 中稠密，当且仅当 X 中每个点都是 E 的聚点或属于 E。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.18 Definition. Let X be a metric space. All points and sets mentioned below are\nunderstood to be elements and subsets of X.\n(a) A neighborhood of p is a set Nr(p) consisting of all q such that d(p, q) < r for\nsome r > 0. The number r is called the radius of Nr(p).\n(b) A point p is a limit point of the set E if every neighborhood of p contains a\npoint q ̸= p such that q ∈E.\n(c) If p ∈E and p is not a limit point of E, then p is called an isolated point of E.\n(d) E is closed if every limit point of E is a point of E.\n(e) A point p is an interior point of E if there is a neighborhood N of p such that\nN ⊂E.\n(f) E is open if every point of E is an interior point of E.\n(g) The complement of E (denoted by Ec) is the set of all points p ∈X such that\np /∈E.\n(h) E is perfect if E is closed and if every point of E is a limit point of E.\n(i) E is bounded if there is a real number M and a point q ∈X such that d(p, q) <\nM for all p ∈E.\n(j) E is dense in X if every point of X is a limit point of E, or a point of E (or both).\nLet us note that in R1 neighborhoods are segments, whereas in R2 neighbor-\nhoods are interiors of circles."
+    },
+    {
+      "id": "2.19",
+      "ref": "2.19",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "邻域是开集",
+      "aliases": [
+        "neighborhood",
+        "open"
+      ],
+      "statement": "度量空间中，每个邻域 Nᵣ(p) 都是开集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 41,
+        "printed_page": 29
+      },
+      "raw": "2.19 Theorem. Every neighborhood is an open set.\nProof. Consider a neighborhood E = Nr(p), and let q be any point of E. Then there\nis a positive real number h such that\nd(p, q) = r −h.\nFor all points s such that d(q, s) < h, we have then\nd(p, s) ≤d(p, q) + d(q, s) < r −h + h = r,\nso that s ∈E. Thus q is an interior point of E."
+    },
+    {
+      "id": "2.20",
+      "ref": "2.20",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "聚点邻域含无穷多点",
+      "aliases": [
+        "limit",
+        "point",
+        "infinite"
+      ],
+      "statement": "若 p 是 E 的聚点，则 p 的每个邻域都包含 E 的无穷多个点。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 41,
+        "pdf_end": 42,
+        "printed_page": 29
+      },
+      "raw": "2.20 Theorem. If p is a limit point of a set E, then every neighborhood of p contains\ninfinitely many points of E.\n\nMETRIC SPACES\n30\nProof. Suppose there is a neighborhood N of p which contains only a finite number\nof points of E. Let q1, . . . , qn be those points of N ∩E which are distinct from p,\nand put\nr =\nmin\n1≤m≤n d(p, qm).\n[We use this notation to denote the smallest of the numbers d(p, q1), . . . , d(p, qn).]\nThe minimum of a finite set of positive numbers is clearly positive, so that r > 0.\nThe neighborhood Nr(p) contains no point q of E such that q ̸= p, so that p is\nnot a limit point of E. This contradiction establishes the theorem.\nCorollary. A finite point set has no limit points."
+    },
+    {
+      "id": "2.23",
+      "ref": "2.23",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "开闭集的补集关系",
+      "aliases": [
+        "open",
+        "closed",
+        "complement"
+      ],
+      "statement": "E 是开集当且仅当 Eᶜ 是闭集；等价地，F 是闭集当且仅当 Fᶜ 是开集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 43,
+        "pdf_end": 43,
+        "printed_page": 31
+      },
+      "raw": "2.23 Theorem. A set E is open if and only if its complement is closed.\nProof. First, suppose Ec is closed. Choose x ∈E. Then x /∈Ec, and x is not a limit\npoint of Ec. Hence there exists a neighborhood N of x such that Ec ∩N is empty,\nthat is, N ⊂E. Thus x is an interior point of E, and E is open.\nNext, suppose E is open. Let x be a limit point of Ec. Then every neighborhood\nof x contains a point of Ec, so that x is not an interior point of E. Since E is open,\nthis means that x ∈Ec. It follows that Ec is closed.\nCorollary. A set F is closed if and only if its complement is open."
+    },
+    {
+      "id": "2.24",
+      "ref": "2.24",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "开闭集的并交",
+      "aliases": [
+        "union",
+        "intersection",
+        "open",
+        "closed"
+      ],
+      "statement": "任意开集的并是开集；任意闭集的交是闭集；有限个开集的交是开集；有限个闭集的并是闭集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 43,
+        "pdf_end": 44,
+        "printed_page": 31
+      },
+      "raw": "2.24 Theorem.\n(a) For any collection {Gα} of open sets, S\nα Gα is open.\n(b) For any collection {Fα} of closed sets, T\nα Fα is closed.\n(c) For any finite collection G1, . . . , Gn of open sets, Tn\ni=1 Gi is open.\n(d) For any finite collection F1, . . . , Fn of closed sets, Sn\ni=1 Fi is closed.\nProof. Put G = S\nα Gα. If x ∈G then x ∈Gα for some α. Since x is an interior\npoint of Gα, x is also an interior point of G, and G is open. This proves (a).\nBy Theorem 2.22,\n(2.21)\n \n\\\nα\nFα\n!c\n=\n[\nα\n(Fc\nα) ,\nand Fcα is open, by Theorem 2.23. Hence (a) implies that (2.21) is open so that\nT\nα Fα is closed.\nNext, put H = Tn\ni=1 Gi. For any x ∈H, there exist neighborhoods Ni of x, with\nradii ri, such that Ni ⊂Gi (i = 1, . . . , n). Put\nr = min{r1, . . . , rn}\nand let N be the neighborhood of x of radius r. Then N ⊂Gi for i = 1, . . . , n, so\nthat N ⊂H, and H is open.\nBy taking complements, (d) follows from (c):\n n\n[\ni=1\nFi\n!c\n=\nn\n\\\ni=1\n(Fc\ni ) .\n\nMETRIC SPACES\n32"
+    },
+    {
+      "id": "2.26",
+      "ref": "2.26",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "闭包",
+      "aliases": [
+        "closure"
+      ],
+      "statement": "设 E′ 是 E 的全部聚点组成的集合。E 的闭包定义为 E̅=E∪E′。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 44,
+        "pdf_end": 44,
+        "printed_page": 32
+      },
+      "raw": "2.26 Definition. If X is a metric space, if E ⊂X, and if E′ denotes the set of all limit\npoints of E in X, then the closure of E is the set E = E ∪E′."
+    },
+    {
+      "id": "2.31",
+      "ref": "2.31",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "开覆盖",
+      "aliases": [
+        "open",
+        "cover"
+      ],
+      "statement": "度量空间 X 中，若一族开集 {Gα} 满足 E⊂⋃αGα，则称它为 E 的开覆盖。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 45,
+        "pdf_end": 45,
+        "printed_page": 33
+      },
+      "raw": "2.31 Definition. By an open cover of a set E in a metric space X we mean a collection\n{Gα} of open subset of X such that E ⊂S\nα Gα."
+    },
+    {
+      "id": "2.32",
+      "ref": "2.32",
+      "kind": "definition",
+      "chapter": 2,
+      "title": "紧致集",
+      "aliases": [
+        "compact",
+        "compactness",
+        "紧集",
+        "紧性"
+      ],
+      "statement": "K⊂X 紧致，当且仅当 K 的每个开覆盖都存在有限子覆盖：能从覆盖中选出有限个开集，其并仍覆盖 K。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 45,
+        "pdf_end": 45,
+        "printed_page": 33
+      },
+      "raw": "2.32 Definition. A subset K of a metric space X is said to be compact if every open\ncover of K contains a finite subcover.\nMore explicitly, this requirement is that if {Gα} is an open cover of K, then there\nare finitely many indices α1, . . . , αn such that\nK ⊂Gα1 ∪· · · ∪Gαn.\nThe notion of compactness is of great importance in analysis, especially in con-\nnection with continuity (Chap. 4).\nIt is clear that every finite set is compact. The existence of a large class of infinite\ncompact sets in Rk will follow from Theorem 2.41.\nWe observed earlier (in Remark 2.29) that if E ⊂Y ⊂X, then E may be open\nrelative to Y without being open relative to X. The property of being open thus\ndepends on the space in which E is embedded. The same is true of the property of\nbeing closed.\nCompactness, however, behaves better, as we shall now see. To formulate the\nnext theorem, let us say, temporarily, that K is compact relative to X if the require-\nments of Definition 2.32 are met."
+    },
+    {
+      "id": "2.34",
+      "ref": "2.34",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "紧集是闭集",
+      "aliases": [
+        "compact",
+        "closed"
+      ],
+      "statement": "度量空间的紧致子集都是闭集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 46,
+        "pdf_end": 46,
+        "printed_page": 34
+      },
+      "raw": "2.34 Theorem. Compact subsets of metric spaces are closed.\nProof. Let K be a compact subset of a metric space X. We shall prove that the\ncomplement of K is an open subset of X.\nSuppose p ∈X, p /∈K. If q ∈K, let Vq and Wq be neighborhoods of p and q,\nrespectively, of radius less than 1\n2d(p, q) [see Definition 2.18(a). Since K is compact,\nthere are finitely many points q1, . . . , qn in K such that\nK ⊂Wq1 ∪· · · ∪Wqn = W.\nIf V = Vq1 ∩· · · ∩Vqn, then V is a neighborhood of p which does not intersect W.\nHence V ∈Kc, so that p is an interior point of Kc. The theorem follows."
+    },
+    {
+      "id": "2.35",
+      "ref": "2.35",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "紧集的闭子集仍紧",
+      "aliases": [
+        "closed",
+        "subset",
+        "compact"
+      ],
+      "statement": "若 K 是度量空间 X 中的紧集，F⊂K 且 F 在 X 中闭，则 F 紧致。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 46,
+        "pdf_end": 46,
+        "printed_page": 34
+      },
+      "raw": "2.35 Theorem. Closed subsets of compact sets are compact.\nProof. Suppose F ⊂K ⊂X, F is closed (relative to X), and K is compact. Let {Vα} be\nan open cover of F. If Fc is adjoined to {Vα}, we obtain an open cover Ωof K. Since\nK is compact, there is a finite subcollection Φ of Ωwhich covers K, and hence F. If\nFc is a member of Φ, we may remove it from Φ and still retain an open cover of F.\nWe have thus shown that a finite subcollection of {Vα} covers F.\nCorollary. If F is closed and K is compact, then F ∩K is compact.\nProof. Theorems 2.24(b) and 2.34 show that F ∩K is closed; since F ∩K ⊂K, Theo-\nrem 2.35 shows that F ∩K is compact."
+    },
+    {
+      "id": "2.36",
+      "ref": "2.36",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "紧集族的有限交性质",
+      "aliases": [
+        "finite",
+        "intersection",
+        "property"
+      ],
+      "statement": "若非空的一族紧集 {Kα} 的每个有限子族都有非空交集，则全族交集 ⋂αKα 非空。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 46,
+        "pdf_end": 47,
+        "printed_page": 34
+      },
+      "raw": "2.36 Theorem. If {Kα} is a collection of compact subsets of a metric space X such that the\nintersection of every finite subcollection of {Kα} is nonempty, then T Kα is nonempty.\n\nCOMPACT SETS\n35\nProof. Fix a member K1 of {Kα} and put Gα = Kcα. Assume that no point of K1\nbelongs to every Kα. Then the sets Gα form an open cover of K1; since K1 is\ncompact, there are finitely many indices α1, . . . , αn such that K1 ⊂Gα1 ∪· · · ∪\nGαn. But this means that\nK1 ∩Kα1 ∩· · · ∩Kαn\nis empty, in contradiction to our hypothesis.\nCorollary. If {Kn} is a countable collection of nonempty compact sets such that Kn ⊃\nKn+1 (n = 1, 2, 3, . . . ), then T∞\nn=1 Kn is not empty."
+    },
+    {
+      "id": "2.37",
+      "ref": "2.37",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "紧集的无穷子集有聚点",
+      "aliases": [
+        "compact",
+        "infinite",
+        "limit",
+        "point"
+      ],
+      "statement": "若 K 紧致，E⊂K 是无穷集，则 E 至少有一个属于 K 的聚点。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 47,
+        "pdf_end": 47,
+        "printed_page": 35
+      },
+      "raw": "2.37 Theorem. If E is an infinite subset of a compact set K, then E has a limit point in K.\nProof. If no point of K were a limit point of E, then each q ∈K would have a\nneighborhood Vq which contains at most one point of E (namely, q, if q ∈E). It\nis clear that no finite subcollection of {Vq} can cover E; and the same is true of K,\nsince E ⊂K. This contradicts the compactness of K."
+    },
+    {
+      "id": "2.40",
+      "ref": "2.40",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "欧氏空间的闭矩体紧致",
+      "aliases": [
+        "k-cell",
+        "compact"
+      ],
+      "statement": "ℝᵏ 中每个 k-cell（各坐标属于有限闭区间的矩体）都是紧集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 47,
+        "pdf_end": 48,
+        "printed_page": 35
+      },
+      "raw": "2.40 Theorem. Every k-cell is compact.\n\nCOMPACT SETS\n36\nProof. Let I be a k-cell, consisting of all points x = (x1, . . . , xk) such that\naj ≤xj ≤bj (1 ≤j ≤k). Put\nδ =\n\u000e k\nX\n1\n(bj −aj)2\n\u000f1/2\n.\nThen |x −y| ≤δ, if x ∈I, y ∈I.\nSuppose, to get a contradiction, that there exists an open cover {Gα} of I which\ncontains no finite subcover of I. Put cj = (aj + bj)/2. The intervals [aj, cj] and\n[cj, bj] then determine 2k k-cells Qi whose union is I. At least one of these sets\nQi, call it I1, cannot be covered by any finite subcollection of {Gα} (otherwise I\ncould be so covered). We next subdivide I1 and continue the process. We obtain a\nsequence (In) with the following properties:\n(a) I ⊃I1 ⊃I2 ⊃I3 ⊃· · · ;\n(b) In is not covered by any finite subcollection of {Gα};\n(c) If x ∈In and y ∈In, then |x −y| ≤2−nδ.\nBy (a) and Theorem 2.39, there is a point x∗which lies in every In. For some\nα, x∗∈Gα. Since Gα is open, there exists r > 0 such that |y −x∗| < r implies that\ny ∈Gα. If n is so large that 2−nδ < r (there is such an n, for otherwise 2n ≤δ/r\nfor all positive integers n, which is absurd since R is archimedean), then (c) implies\nthat In ⊂Gα, which contradicts (b).\nThis completes the proof.\nThe equivalence of (a) and (b) in the next theorem is known as the Heine-Borel\ntheorem."
+    },
+    {
+      "id": "2.41",
+      "ref": "2.41",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "Heine–Borel 定理",
+      "aliases": [
+        "Heine",
+        "Borel",
+        "closed",
+        "bounded",
+        "compact"
+      ],
+      "statement": "对 E⊂ℝᵏ，下列等价：① E 闭且有界；② E 紧致；③ E 的每个无穷子集都有属于 E 的聚点。闭且有界⇒紧致的方向不能直接推广到任意度量空间。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 48,
+        "pdf_end": 49,
+        "printed_page": 36
+      },
+      "raw": "2.41 Theorem. If a set E in Rk has one of the following three properties, then it has the\nother two:\n(a) E is closed and bounded.\n(b) E is compact.\n(c) Every infinite subset of E has a limit point in E.\nProof. If (a) holds, then E ⊂I for some k-cell I, and (b) follows from Theorems 2.40\nand 2.35. Theorem 2.37 shows that (b) implies (c). It remains to be shown that (c)\nimplies (a).\nIf E is not bounded, then E contains points xn with\n|xn| > n\n(n = 1, 2, 3, . . . ).\nThe set S consisting of these points xn is infinite and clearly has no limit point in\nRk, hence has none in E. Thus (c) implies that E is bounded.\nIf E is not closed, then there is a point x0 ∈Rk which is a limit point of E but not\na point of E. For n = 1, 2, 3, . . . , there are points xn ∈E such that |xn −x0| < 1/n.\n\nPERFECT SETS\n37\nLet S be the set of these points xn. Then S is infinite (otherwise |xn −x0| would\nhave a constant positive value, for infinitely many n), S has x0 as a limit point, and\nS has no other limit point in Rk. For if y ̸= x0, then\n|xn −y| ≥|x0 −y| −|xn −x0|\n≥|x0 −y| −1\nn ≥1\n2 |x0 −y|\nfor all but finitely many n; this shows that y is not a limit point of S (Theorem 2.20).\nThus S has no limit point in E; hence E must be closed if (c) holds.\nWe should remark, at this point, that (b) and (c) are equivalent in any metric\nspace (Exercise 2.26), but that (a) does not, in general, imply (b) and (c). Examples\nare furnished by Exercise 2.16 and by the space L 2, which is discussed in Chap. 11."
+    },
+    {
+      "id": "2.42",
+      "ref": "2.42",
+      "kind": "theorem",
+      "chapter": 2,
+      "title": "Weierstrass 聚点定理",
+      "aliases": [
+        "Bolzano",
+        "Weierstrass",
+        "bounded",
+        "infinite"
+      ],
+      "statement": "ℝᵏ 中每个有界无穷子集都有一个属于 ℝᵏ 的聚点。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 49,
+        "pdf_end": 49,
+        "printed_page": 37
+      },
+      "raw": "2.42 Theorem (Weierstrass). Every bounded infinite subset of Rk has a limit point in\nRk.\nProof. Being bounded, the set E in question is a subset of a k-cell I ⊂Rk. By\nTheorem 2.40, I is compact, and so E has a limit point in I, by Theorem 2.37.\nPERFECT SETS"
+    },
+    {
+      "id": "3.1",
+      "ref": "3.1",
+      "kind": "definition",
+      "chapter": 3,
+      "title": "序列收敛",
+      "aliases": [
+        "sequence",
+        "convergence",
+        "limit"
+      ],
+      "statement": "度量空间 X 中，序列 (pₙ) 收敛到 p∈X，是指对每个 ε>0，存在整数 N，使 n≥N 时 d(pₙ,p)<ε。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 55,
+        "pdf_end": 56,
+        "printed_page": null
+      },
+      "raw": "3.1 Definition. A sequence (pn) in a metric space X is said to converge if there is\na point p ∈X with the following property: For every ε > 0 there is an integer N\nsuch that n ≥N implies that d(pn, p) < ε. (Here d denotes the distance in X.)\nIn this case, we also say that (pn) converges to p, or that p is the limit of (pn)\n[see Theorem 3.2(b), and we write pn →p, or\nlim\nn→∞pn = p.\nIf (pn) does not converge, it is said to diverge.\nIt might be well to point out that our definition of “convergent sequence” de-\npends not only on (pn) but also on X; for instance, the sequence (1/n) converges\nin R1 (to 0), but fails to converge in the set of all positive real numbers [with\nd(x, y) = |x −y|]. In cases of possible ambiguity, we can be more precise and\nspecify “convergent in X” rather that “convergent.”\nWe recall that the set of points pn (n = 1, 2, 3, . . . ) is the range of (pn). The\nrange of a sequence may be a finite set, or it may be infinite. The sequence (pn) is\nsaid to be bounded if its range is bounded.\nAs examples, consider the following sequences of complex numbers (that is,\nX = R2):\n43\n\nCONVERGENT SEQUENCES\n44\n(a) If sn = 1/n, then limn→∞sn = 0; the range is infinite, and the sequence is\nbounded.\n(b) If sn = n2, the sequence sn is unbounded, is divergent, and has infinite\nrange.\n(c) If sn = 1 + [(−1)n/n], the sequence (sn) converges to 1, is bounded, and has\ninfinite range.\n(d) If sn = in, the sequence (sn) is divergent, is bounded, and has finite range.\n(e) If sn = 1 (n = 1, 2, 3, . . . ), then (sn) converges to 1, is bounded, and has finite\nrange.\nWe now summarize some important properties of convergent sequences in\nmetric spaces."
+    },
+    {
+      "id": "3.2",
+      "ref": "3.2",
+      "kind": "theorem",
+      "chapter": 3,
+      "title": "收敛序列的基本性质",
+      "aliases": [
+        "unique",
+        "limit",
+        "bounded",
+        "sequence"
+      ],
+      "statement": "度量空间中的收敛序列有唯一极限且有界。若 p 是集合 E 的聚点，则存在 E 中的序列收敛到 p。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 56,
+        "pdf_end": 57,
+        "printed_page": 44
+      },
+      "raw": "3.2 Theorem. Let (pn) be a sequence in a metric space X.\n(a) (pn) converges to p ∈X if and only if every neighborhood of p contains pn for all\nbut finitely many n.\n(b) If p ∈X, p′ ∈X, and if (pn) converges to p and to p′, then p′ = p.\n(c) If (pn) converges, then (pn) is bounded.\n(d) If E ⊂X and if p is a limit point of E, then there is a sequence (pn) in E such that\np = limn→∞pn.\nProof.\n(a) Suppose pn →p and let V be a neighborhood of p. For some ε > 0, the\nconditions d(q, p) < ε, q ∈X imply q ∈V. Corresponding to this ε, there\nexists N such that n ≥N implies d(pn, p) < ε. Thus n ≥N implies pn ∈V.\nConversely, suppose every neighborhood of p contains all but finitely\nmany of the pn. Fix ε > 0 and let V be the set of all q ∈X such that d(p, q) <\nε. By assumption, there exists N (corresponding to this V) such that pn ∈V\nif n ≥N. Thus d(pn, p) < ε if n ≥N; hence pn →p.\n(b) Let ε > 0 be given. There exist integers N, N′ such that\nn ≥N\nimplies\nd(pn, p) < ε\n2,\nn ≥N′\nimplies\nd(pn, p′) < ε\n2.\nHence if n ≥max{N, N′}, we have\nd(p, p′) ≤d(p, pn) + d(pn, p′) < ε.\nSince ε was arbitrary, we conclude that d(p, p′) = 0.\n(c) Suppose pn →p. Then there is an integer N such that n > N implies\nd(pn, p) < 1. Put\nr = max{1, d(p1, p), . . . , d(pN, p)}.\nThen d(pn, p) ≤r for n = 1, 2, 3, . . . .\n\nCONVERGENT SEQUENCES\n45\n(d) For each positive integer n, there is a point pn ∈E such that d(pn, p) < 1/n.\nGiven ε > 0, choose N so that Nε > 1. If n > N, it follows that d(pn, p) < ε.\nHence pn →p.\nThis completes the proof.\nFor sequences in Rk we can study the relation between congruence, on the one\nhand, and the algebraic operations on the other. We first consider sequences of\ncomplex numbers."
+    },
+    {
+      "id": "3.5",
+      "ref": "3.5",
+      "kind": "definition",
+      "chapter": 3,
+      "title": "子序列",
+      "aliases": [
+        "subsequence"
+      ],
+      "statement": "若正整数 n₁<n₂<⋯，则 (pₙᵢ) 是 (pₙ) 的子序列。收敛子序列的极限称为原序列的子序列极限。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 59,
+        "pdf_end": 59,
+        "printed_page": 47
+      },
+      "raw": "3.5 Definition. Given a sequence (pn), consider a sequence (nk) of positive inte-\ngers such that n1 < n2 < n3 < · · · . Then the sequence (pni) is called a subsequence\nof (pn). If (pni) converges, its limit is called it subsequential limit of (pn).\nIt is clear that (pn) converges to p if and only if every subsequence of (pn)\nconverges to p. We leave the details of the proof to the reader."
+    },
+    {
+      "id": "3.6",
+      "ref": "3.6",
+      "kind": "theorem",
+      "chapter": 3,
+      "title": "紧空间的子序列收敛性",
+      "aliases": [
+        "sequential",
+        "compactness",
+        "bounded",
+        "sequence"
+      ],
+      "statement": "紧度量空间 X 中每个序列都有子序列收敛到 X 中的点；特别地，ℝᵏ 中每个有界序列都有收敛子序列。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 59,
+        "pdf_end": 59,
+        "printed_page": 47
+      },
+      "raw": "3.6 Theorem.\n(a) If (pn) is a sequence in a compact metric space X, then some subsequence of (pn)\nconverges to a point of X.\n(b) Every bounded sequence in Rk contains a convergent subsequence.\nProof.\n(a) Let E be the range of (pn). If E is finite then there is a p ∈E and a sequence\n(ni) with n1 < n2 < n3 < · · · such that\npn1 = pn2 = · · · = p.\nThe subsequence (pni) so obtained converges evidently to p.\nIf E is infinite, Theorem 2.37 shows that E has a limit point p ∈X. Choose\nn1 so that d(p, pn1) < 1. Having chosen n1, . . . , ni−1, we see from Theo-\nrem 2.20 that there is an integer ni > ni−1 such that d(p, pni) < 1/i. Then\n(pni) converges to p.\n(b) This follows from (a) since Theorem 2.41 implies that every bounded subset\nof Rk lies in a compact subset of Rk."
+    },
+    {
+      "id": "3.8",
+      "ref": "3.8",
+      "kind": "definition",
+      "chapter": 3,
+      "title": "Cauchy 序列",
+      "aliases": [
+        "Cauchy",
+        "sequence",
+        "柯西序列"
+      ],
+      "statement": "度量空间 X 中，(pₙ) 是 Cauchy 序列，当且仅当对每个 ε>0，存在整数 N，使所有 n,m≥N 都有 d(pₙ,pₘ)<ε。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 60,
+        "pdf_end": 60,
+        "printed_page": 48
+      },
+      "raw": "3.8 Definition. A sequence (pn) in a metric space X is said to be a Cauchy sequence\nif for every ε > 0 there is an integer N such that d(pn, pm) < ε if n ≥N and\nm ≥N.\nIn our discussion of Cauchy sequences, as well as other situations which will\narise later, the following geometric concept will be useful."
+    },
+    {
+      "id": "3.11",
+      "ref": "3.11",
+      "kind": "theorem",
+      "chapter": 3,
+      "title": "收敛与 Cauchy 序列",
+      "aliases": [
+        "Cauchy",
+        "convergence",
+        "compact",
+        "Euclidean"
+      ],
+      "statement": "① 每个收敛序列都是 Cauchy 序列；② 紧度量空间中的每个 Cauchy 序列都收敛；③ ℝᵏ 中的每个 Cauchy 序列都收敛。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 61,
+        "pdf_end": 62,
+        "printed_page": 49
+      },
+      "raw": "3.11 Theorem.\n(a) In any metric space X, every convergent sequence is a Cauchy sequence.\n(b) If X is a compact metric space and if (pn) is a Cauchy sequence in X, then (pn)\nconverges to some point of X.\n(c) In Rk, every Cauchy sequence converges.\nNote: The difference between the definition of convergence and the definition\nof a Cauchy sequence is that the limit is explicitly involved in the former, but not\nin the latter. Thus Theorem 3.11(b) may enable us to decide whether or not a given\nsequence converges without knowledge of the limit to which it may converge.\nThe fact (contained in Theorem 3.11) that a sequence converges in Rk if and\nonly if it is a Cauchy sequence is usually called the Cauchy criterion for convergence.\nProof.\n(a) If pn →p and if ε > 0, there is an integer N such that d(p, pn) < ε for all\nn ≥N. Hence\nd(pn, pm) ≤d(pn, p) + d(p, pm) < 2ε\nas soon as n ≥N and n ≥N. Thus (pn) is a Cauchy sequence.\n(b) Let (pn) be a Cauchy sequence in the compact space X. For N = 1, 2, 3, . . . ,\nlet EN be the set consisting of pN, pN+1, pN+2, . . . . Then\n(3.3)\nlim\nN→∞diam EN = 0,\nby Definition 3.9 and Theorem 3.10(a). Being a closed subset of a compact\nspace X, each EN is compact (Theorem 2.35). Also, EN ⊃EN+1, so that\nEN ⊃EN+1.\nTheorem 3.10(b) shows now that there is a unique p ∈X which lies in\nevery EN.\n\nCAUCHY SEQUENCES\n50\nLet ε > 0 be given. By (3.3) there is an integer N0 such that diam EN < ε\nif N ≥N0. Since p ∈EN, it follows that d(p, q) < ε for every q ∈EN,\nhence for every q ∈EN. In other words, d(p, pn) < ε if n ≥N0. This says\nprecisely that pn →p.\n(c) Let (xn) be a Cauchy sequence in Rk. Define EN as in (b), with xi in place\nof pi. For some N, diam EN < 1. The range of (xn) is the union of EN and\nthe finite set {x1, . . . , xN−1}. Hence (xn) is bounded. Since every bounded\nsubset of Rk has compact closure in Rk (Theorem 2.41), (c) follows from\n(b)."
+    },
+    {
+      "id": "4.1",
+      "ref": "4.1",
+      "kind": "definition",
+      "chapter": 4,
+      "title": "函数极限",
+      "aliases": [
+        "function",
+        "limit"
+      ],
+      "statement": "设 E⊂X，f:E→Y，p 是 E 的聚点。f(x)→q (x→p)，是指对每个 ε>0，存在 δ>0，使 x∈E 且 0<dX(x,p)<δ 时 dY(f(x),q)<ε。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 88,
+        "pdf_end": 89,
+        "printed_page": null
+      },
+      "raw": "4.1 Definition. Let X and Y be metric spaces; suppose E ⊂X, f maps E into Y, and\np is a limit point of E. We write f(x) →q as x →p, or\n(4.1)\nlim\nx→p f(x) = q\nif there is a point q ∈Y with the following property: For every ε > 0 there exists a\nδ > 0 such that\n(4.2)\ndY(f(x), q) < ε\nfor all points x ∈E for which\n(4.3)\n0 < dX(x, p) < δ.\nThe symbols dX and dY refer to the distances in X and Y, respectively.\nIf X and/or Y are replaced by the real line, the complex plane, or by some\n76\n\nLIMITS OF FUNCTIONS\n77\neuclidean space Rk, the distances dX, dY are of course replaced by absolute values,\nor by norms of differences (see Example 2.16).\nIt should be noted that p ∈X, but that p need not be a point of E in the above\ndefinition. Moreover, even if p ∈E, we may very well have f(p) ̸= limx→p f(x).\nWe can recast this definition in terms of limits of sequences:"
+    },
+    {
+      "id": "4.5",
+      "ref": "4.5",
+      "kind": "definition",
+      "chapter": 4,
+      "title": "连续性",
+      "aliases": [
+        "continuity",
+        "continuous"
+      ],
+      "statement": "设 f:E⊂X→Y，p∈E。f 在 p 连续，当且仅当对每个 ε>0，存在 δ>0，使所有 x∈E 满足 dX(x,p)<δ 时，dY(f(x),f(p))<ε。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 90,
+        "pdf_end": 90,
+        "printed_page": 78
+      },
+      "raw": "4.5 Definition. Suppose X and Y are metric spaces, E ⊂X, p ∈E, and f maps E\ninto Y. Then f is said to be continuous at p if for every ε > 0 there exists a δ > 0\nsuch that\ndY(f(x), f(p)) < ε\nfor all points x ∈E for which dX(x, p) < δ.\nIf f is continuous at every point of E, then f is said to be continuous on E.\nIt should be noted that f has to be defined at the point p in order to be contin-\nuous at p. (Compare this with the remark following Definition 4.1.)\nIf p is an isolated point of E, then our definition implies that every function\nf which has E as its domain of definition is continuous at p.\nFor, no matter\nwhich ε > 0 we choose, we can pick δ > 0 so that the only point x ∈E for which\ndX(x, p) < δ is x = p; then\ndY(f(x), f(p)) = 0 < ε."
+    },
+    {
+      "id": "4.8",
+      "ref": "4.8",
+      "kind": "theorem",
+      "chapter": 4,
+      "title": "连续性的开集刻画",
+      "aliases": [
+        "preimage",
+        "open",
+        "continuity"
+      ],
+      "statement": "映射 f:X→Y 连续，当且仅当 Y 中每个开集的原像在 X 中是开集。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 91,
+        "pdf_end": 92,
+        "printed_page": 79
+      },
+      "raw": "4.8 Theorem. A mapping f of a metric space X into a metric space Y is continuous on X\nif and only if f−1(V) is open in X for every open set V in Y.\n(Inverse images are defined in Definition 2.2.) This is a very useful characteri-\nzation of continuity.\nProof. Suppose f is continuous on X and V is an open set in Y. We have to show\nthat every point of f−1(V) is an interior point of f−1(V). So, suppose p ∈X and\nf(p) ∈V. Since V is open, there exists ε > 0 such that y ∈V if dY(f(p), y) < ε;\nand since f is continuous at p, there exists δ > 0 such that dY(f(x), f(p)) < ε if\ndX(x, p) < δ. Thus x ∈f−1(V) as soon as dX(x, p) < δ.\nConversely, suppose f−1(V) is open in X for every open set V in Y. Fix p ∈X\nand ε > 0, let V be the set of all y ∈Y such that dY(y, f(p)) < ε. Then V is open;\nhence f−1(V) is open; hence there exists δ > 0 such that x ∈f−1(V) as soon as\ndX(p, x) < δ. But if x ∈f−1(V), then f(x) ∈V, so that dY(f(x), f(p)) < ε.\nThis completes the proof.\nCorollary. A mapping f of a metric space X into a metric space Y is continuous if and\nonly if f−1(C) is closed in X for every closed set C in Y.\n\nCONTINUOUS FUNCTIONS\n80\nThis follows from the theorem, since a set is closed if and only if its complement\nis open, and since f−1(Ec) = [f−1(E)]c for every E ⊂Y.\nWe now turn to complex-valued and vector-valued functions, and to functions\ndefined on subsets of Rk."
+    },
+    {
+      "id": "4.14",
+      "ref": "4.14",
+      "kind": "theorem",
+      "chapter": 4,
+      "title": "紧集的连续像紧致",
+      "aliases": [
+        "continuous",
+        "image",
+        "compact"
+      ],
+      "statement": "若 X 是紧度量空间，f:X→Y 连续，Y 是度量空间，则 f(X) 紧致。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 93,
+        "pdf_end": 94,
+        "printed_page": 81
+      },
+      "raw": "4.14 Theorem. Suppose f is a continuous mapping of a compact metric space X into a\nmetric space Y. Then f(X) is compact.\nProof. Let {Vα} be an open cover of f(X). Since f is continuous, Theorem 4.8 shows\nthat each of the sets f−1(Vα) is open. Since X is compact, there are finitely many\nindices, say α1, . . . , αn, such that\n(4.12)\nX ⊂f−1(Vα1) ∪· · · ∪f−1(Vαn).\n\nCONTINUITY AND COMPACTNESS\n82\nSince f(f−1(E)) ⊂E for every E ⊂Y, (4.12) implies that\n(4.13)\nf(X) ⊂Vα1 ∪· · · ∪Vαn.\nThis completes the proof.\nNote: We have used the relation f(f−1(E)) ⊂E, valid for E ⊂Y. If E ⊂X, then\nf−1(f(E)) ⊃E; equality need not hold in either case.\nWe shall now deduce some consequences of Theorem 4.14."
+    },
+    {
+      "id": "4.15",
+      "ref": "4.15",
+      "kind": "theorem",
+      "chapter": 4,
+      "title": "连续像的闭性与有界性",
+      "aliases": [
+        "continuous",
+        "compact",
+        "bounded",
+        "closed"
+      ],
+      "statement": "若 X 是紧度量空间，f:X→ℝᵏ 连续，则 f(X) 闭且有界；特别地，f 有界。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 94,
+        "pdf_end": 94,
+        "printed_page": 82
+      },
+      "raw": "4.15 Theorem. If f is a continuous mapping of a compact metric space X into Rk, then\nf(X) is closed and bounded. Thus, f is bounded.\nThis follows from Theorem 2.41. The result is particularly important when f is\nreal:"
+    },
+    {
+      "id": "4.16",
+      "ref": "4.16",
+      "kind": "theorem",
+      "chapter": 4,
+      "title": "极值定理",
+      "aliases": [
+        "extreme",
+        "value",
+        "maximum",
+        "minimum"
+      ],
+      "statement": "设 X 是非空紧度量空间，f:X→ℝ 连续。则 f 在 X 上取得最大值与最小值，即存在 p,q∈X，使 f(q)≤f(x)≤f(p) 对所有 x∈X 成立。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 94,
+        "pdf_end": 94,
+        "printed_page": 82
+      },
+      "raw": "4.16 Theorem. Suppose f is a continuous real function on a compact metric space X, and\n(4.14)\nM = sup\np∈X\nf(p),\nm = inf\np∈X f(p).\nThen there exist points p, q ∈X such that f(p) = M and f(q) = m.\nThe notation in (4.14) means that M is the least upper bound of the set of all\nnumbers f(p), where p ranges over X, and that m is the greatest lower bound of\nthis set of numbers.\nThe conclusion may also be stated as follows: There exist points p and q in X such\nthat f(q) ≤f(x) ≤f(p) for all x ∈X; that is, f attains its maximum (at p) and its\nminimum (at q).\nProof. By Theorem 4.15, f(X) is a closed and bounded set of real numbers; hence\nf(X) contains\nM = sup f(X)\nand\nm = inf f(X),\nby Theorem 2.28."
+    },
+    {
+      "id": "4.18",
+      "ref": "4.18",
+      "kind": "definition",
+      "chapter": 4,
+      "title": "一致连续",
+      "aliases": [
+        "uniform",
+        "continuity"
+      ],
+      "statement": "f:X→Y 一致连续，是指对每个 ε>0，存在 δ>0，使所有 p,q∈X 只要 dX(p,q)<δ，就有 dY(f(p),f(q))<ε。δ 不能依赖于 p 或 q。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 95,
+        "pdf_end": 95,
+        "printed_page": 83
+      },
+      "raw": "4.18 Definition. Let f be a mapping of a metric space X into a metric space Y. We\nsay that f is uniformly continuous on X if for every ε > 0 there exists δ > 0 such that\n(4.15)\ndY(f(p), f(q)) < ε\nfor all p and q in X for which dX(p, q) < δ.\nLet us consider the differences between the concepts of continuity and of uni-\nform continuity. First, uniform continuity is a property of a function on a set,\nwhereas continuity can be defined at a single point. To ask whether a given func-\ntion is uniformly continuous at a certain point is meaningless. Second, if f is con-\ntinuous on X, then it is possible to find, for each ε > 0 and for each point p of X, a\nnumber δ > 0 having the property specified in Definition 4.5. This δ depends on ε\nand on p. If f is, however, uniformly continuous on X, then it is possible, for each\nε > 0, to find one number δ > 0 which will do for all points p of X.\nEvidently, every uniformly continuous function is continuous. That the two\nconcepts are equivalent on compact sets follows from the next theorem."
+    },
+    {
+      "id": "4.19",
+      "ref": "4.19",
+      "kind": "theorem",
+      "chapter": 4,
+      "title": "紧空间上的连续映射一致连续",
+      "aliases": [
+        "Heine",
+        "Cantor",
+        "uniform",
+        "continuity"
+      ],
+      "statement": "若 X 是紧度量空间，f:X→Y 连续，Y 是度量空间，则 f 在 X 上一致连续。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 95,
+        "pdf_end": 96,
+        "printed_page": 83
+      },
+      "raw": "4.19 Theorem. Let f be a continuous mapping of a compact metric space X into a metric\nspace Y. Then f is uniformly continuous on X.\nProof. Let ε > 0 be given. Since f is continuous, we can associate to each point\np ∈X a positive number ϕ(p) such that\n(4.16)\nq ∈X, dX(p, q) < ϕ(p)\nimplies\ndY(f(p), f(q)) < ε\n2.\nLet J(p) be the set of all q ∈X for which\n(4.17)\ndX(p, q) < 1\n2ϕ(p).\nSince p ∈J(p), the collection of all sets J(p) is an open cover of X; since X is com-\npact, there is a finite set of points p1, . . . , pn in X, such that\n(4.18)\nX ⊂J(p1) ∪· · · ∪J(pn).\nWe put\n(4.19)\nδ = 1\n2 min{ϕ(p1), . . . , ϕ(pn)}.\nThen δ > 0. (This is one point where the finiteness of the covering, inherent in\nthe definition of compactness, is essential. The minimum of a finite set of positive\nnumbers is positive, whereas the inf of an infinite set of positive numbers may very\nwell be 0.)\nNow let q and p be points of X such that dX(p, q) < δ. By (4.18), there is an\n\nCONTINUITY AND COMPACTNESS\n84\ninteger m, 1 ≤m ≤n, such that p ∈J(pm); hence\n(4.20)\ndX(p, pm) < 1\n2ϕ(pm),\nand we also have\ndX(q, pm) ≤dX(p, q) + dX(p, pm) < δ + 1\n2ϕ(pm) ≤ϕ(pm).\nFinally, (4.16) shows that therefore\ndY(f(p), f(q)) ≤dY(f(p), f(pm)) + dY(f(q), f(pm)) < ε.\nThis completes the proof.\nAn alternative proof is sketched in Exercise 4.10.\nWe now proceed to show that compactness is essential in the hypotheses of\nTheorems 4.14, 4.15, 4.16, and 4.19."
+    },
+    {
+      "id": "5.1",
+      "ref": "5.1",
+      "kind": "definition",
+      "chapter": 5,
+      "title": "导数",
+      "aliases": [
+        "derivative",
+        "differentiable"
+      ],
+      "statement": "实函数 f 定义在 [a,b] 上。在 x 处，若差商 (f(t)−f(x))/(t−x) 在 t→x 时有有限极限，则称此极限为 f′(x)，并称 f 在 x 可微；端点采用定义域内的单侧极限。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 106,
+        "pdf_end": 107,
+        "printed_page": null
+      },
+      "raw": "5.1 Definition. Let f be defined (and real-valued) on [a, b]. For any x ∈[a, b], form\nthe quotient\n(5.1)\nϕ(t) = f(t) −f(x)\nt −x\n(a < t < b, t ̸= x),\nand define\n(5.2)\nf′(x) = lim\nt→x ϕ(t),\nprovided this limit exists in accordance with Definition 4.1.\nWe thus associate with the function f a function f′ whose domain is the set of\npoints x at which the limit (5.2) exists; f′ is called the derivative of f.\nIf f′ is defined at a point x, we say that f is differentiable at x. If f′ is defined at\nevery point of a set E ⊂[a, b], we say that f is differentiable on E.\nIt is possible to consider right-hand and left-hand limits in (5.2); this leads to\nthe definition of right-hand and left-hand derivatives. In particular, at the end-\npoints a and b, the derivative, if it exists, is a right-hand or left-hand derivative,\nrespectively. We shall not, however, discuss one-sided derivatives in any detail.\nIf f is defined on a segment (a, b) and if a < x < b, then f′(x) is defined by (5.1)\nand (5.2), as above. But f′(a) and f′(b) are not defined in this case.\n94\n\nTHE DERIVATIVE OF A REAL FUNCTION\n95"
+    },
+    {
+      "id": "5.2",
+      "ref": "5.2",
+      "kind": "theorem",
+      "chapter": 5,
+      "title": "可微蕴含连续",
+      "aliases": [
+        "differentiability",
+        "continuity"
+      ],
+      "statement": "若实函数 f 在 [a,b] 的点 x 处可微，则 f 在 x 连续。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 107,
+        "pdf_end": 107,
+        "printed_page": 95
+      },
+      "raw": "5.2 Theorem. Let f be defined on [a, b]. If f is differentiable at a point x ∈[a, b], then f\nis continuous at x.\nProof. As t →x, we have, by Theorem 4.4,\nf(t) −f(x) = f(t) −f(x)\nt −x\n· (t −x) →f′(x) · 0 = 0.\nThe converse of this theorem is not true. It is easy to construct continuous\nfunctions which fail to be differentiable at isolated points. In Chap. 7 we shall even\nbecome acquainted with a function which is continuous on the whole line without\nbeing differentiable at any point!"
+    },
+    {
+      "id": "5.10",
+      "ref": "5.10",
+      "kind": "theorem",
+      "chapter": 5,
+      "title": "中值定理",
+      "aliases": [
+        "mean",
+        "value",
+        "theorem"
+      ],
+      "statement": "若实函数 f 在 [a,b] 上连续，且在 (a,b) 上可微，则存在 ξ∈(a,b)，使 f(b)−f(a)=(b−a)f′(ξ)。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 110,
+        "pdf_end": 110,
+        "printed_page": 98
+      },
+      "raw": "5.10 Theorem. If f is a real continuous function on [a, b] which is differentiable on (a, b),\nthen there is a point x ∈(a, b) at which\nf(b) −f(a) = (b −a)f′(x).\nProof. Take g(x) = x in Theorem 5.9"
+    },
+    {
+      "id": "7.7",
+      "ref": "7.7",
+      "kind": "definition",
+      "chapter": 7,
+      "title": "一致收敛",
+      "aliases": [
+        "uniform",
+        "convergence"
+      ],
+      "statement": "函数列 fₙ 在 E 上一致收敛到 f，是指对每个 ε>0，存在 N，使所有 n≥N 和所有 x∈E 都有 |fₙ(x)−f(x)|<ε。N 不能依赖于 x。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 147,
+        "pdf_end": 148,
+        "printed_page": 135
+      },
+      "raw": "7.7 Definition. We say that a sequence of functions (fn), n = 1, 2, 3, . . . , converges\nuniformly on E to a function f if for every ε > 0 there is an integer N such that\nn ≥N implies\n(7.12)\n|fn(x) −f(x)| ≤ε\nfor all x ∈E.\n\nUNIFORM CONVERGENCE\n136\nIt is clear that every uniformly convergent sequence is pointwise convergent.\nQuite explicitly, the difference between the two concepts is this: If (fn) converges\npointwise on E, then there exists a function f such that, for every ε > 0, and for\nevery x ∈E, there is an integer N, depending on ε and on x, such that (7.12) holds\nif n ≥N; if (fn) converges uniformly on E, it is possible, fr each ε > 0 to find one\ninteger N which will do for all x ∈E.\nWe say that the series Σfn(x) converges uniformly on E if the sequence (sn) of\npartial sums defined by\nn\nX\ni=1\nfi(x) = sn(x)\nconverges uniformly on E.\nThe Cauchy criterion for uniform convergence is as follows."
+    },
+    {
+      "id": "7.8",
+      "ref": "7.8",
+      "kind": "theorem",
+      "chapter": 7,
+      "title": "一致收敛的 Cauchy 判据",
+      "aliases": [
+        "uniform",
+        "Cauchy",
+        "criterion"
+      ],
+      "statement": "复值函数列 fₙ 在 E 上一致收敛，当且仅当对每个 ε>0，存在 N，使所有 m,n≥N 和 x∈E 都有 |fₙ(x)−fₘ(x)|<ε。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 148,
+        "pdf_end": 148,
+        "printed_page": 136
+      },
+      "raw": "7.8 Theorem. The sequence of functions (fn), defined on E, converges uniformly on E if\nand only if for every ε > 0 there exists an integer N such that m ≥N, n ≥N, x ∈E\nimplies\n(7.13)\n|fn(x) −fm(x)| ≤ε.\nProof. Suppose (fn) converges uniformly on E, and let f be the limit function. Then\nthere is an integer N such that n ≥N, x ∈E implies\n|fn(x) −f(x)| ≤ε\n2,\nso that\n|fn(x) −fm(x)| ≤|fn(x) −f(x)| + |f(x) −fm(x)| ≤ε\nif n ≥N, m ≥N, x ∈E.\nConversely, suppose the Cauchy condition holds. By Theorem 3.11, the se-\nquence (fn(x)) converges, for every x, to a limit which we may call f(x). Thus\nthe sequence (fn) converges on E, to f. We have to prove that the convergence is\nuniform.\nLet ε > 0 be given, and choose N such that (7.13) holds. Fix n, and let m →∞\nin (7.13). Since fm(x) →f(x) as m →∞, this gives\n(7.14)\n|fn(x) −f(x)| ≤ε\nfor every n ≥N and every x ∈E, which completes the proof.\nThe following criterion is sometimes useful."
+    },
+    {
+      "id": "7.12",
+      "ref": "7.12",
+      "kind": "theorem",
+      "chapter": 7,
+      "title": "一致极限保持连续",
+      "aliases": [
+        "uniform",
+        "limit",
+        "continuous"
+      ],
+      "statement": "若函数列 fₙ 在度量空间的集合 E 上连续，且在 E 上一致收敛到 f，则 f 在 E 上连续。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 150,
+        "pdf_end": 150,
+        "printed_page": 138
+      },
+      "raw": "7.12 Theorem. If (fn) is a sequence of continuous functions on E, and if fn →f uni-\nformly on E, then f is is continuous on E.\nThis very important result is an immediate corollary of Theorem 7.11.\nThe converse is not true; that is, a sequence of continuous functions may con-\nverge to a continuous function, although the convergence is not uniform. Exam-\nple 7.6 is of this kind (to see this, apply Theorem 7.9). But there is a case in which\nwe can assert the converse."
+    },
+    {
+      "id": "7.13",
+      "ref": "7.13",
+      "kind": "theorem",
+      "chapter": 7,
+      "title": "Dini 定理",
+      "aliases": [
+        "Dini",
+        "monotone",
+        "compact"
+      ],
+      "statement": "设 K 紧致，fₙ 是 K 上的连续实函数，逐点收敛到连续函数 f，且对所有 x∈K、n≥1 有 fₙ(x)≥fₙ₊₁(x)。则 fₙ→f 在 K 上一致收敛。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 150,
+        "pdf_end": 151,
+        "printed_page": 138
+      },
+      "raw": "7.13 Theorem. Suppose K is compact, and\n(a) (fn) is a sequence of continuous functions on K,\n(b) (fn) converges pointwise to a continuous function f on K,\n(c) fn(x) ≥fn+1(x) for all x ∈K, n = 1, 2, 3, . . . .\nThen fn →f uniformly on K.\n\nUNIFORM CONVERGENCE AND CONTINUITY\n139\nProof. Put gn = fn −f. Then gn is continuous, gn →0 pointwise, and gn ≥gn+1.\nWe have to prove that gn →0 uniformly on K.\nLet ε > 0 be given. Let Kn be the set of all x ∈K with gn(x) ≥ε. Since gn\nis continuous, Kn is closed (Theorem 4.8), hence compact (Theorem 2.35). Since\ngn ≥gn+1, we have Kn ⊃Kn+1. Fix x ∈K. Since gn(x) →0, we see that x ̸∈Kn\nif n is sufficiently large. Thus x ̸∈T Kn. In other words, T Kn is empty. Hence KN\nis empty for some N (Theorem 2.36). It follows that 0 ≤gn(x) < ε for all x ∈K\nand for all n ≥N. This proves the theorem.\nLet us note that compactness is really needed here. For instance if\nfn(x) =\n1\nnx + 1\n(0 < x < 1; n = 1, 2, 3, . . . )\nthen fn(x) →0 monotonically in (0, 1), but the convergence is not uniform."
+    },
+    {
+      "id": "7.16",
+      "ref": "7.16",
+      "kind": "theorem",
+      "chapter": 7,
+      "title": "一致收敛与积分交换",
+      "aliases": [
+        "uniform",
+        "convergence",
+        "integration"
+      ],
+      "statement": "设 α 在 [a,b] 上单调递增，每个 fₙ 在 [a,b] 上 Riemann–Stieltjes 可积，且 fₙ→f 一致。则 f 也可积，且 ∫f dα=limₙ∫fₙ dα。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 152,
+        "pdf_end": 153,
+        "printed_page": 140
+      },
+      "raw": "7.16 Theorem. Let α be monotonically increasing on [a, b]. Suppose fn ∈R(α) on\n[a, b], for n = 1, 2, 3, . . . , and suppose fn →f uniformly on [a, b]. Then f ∈R(α) on\n[a, b], and\n(7.23)\nZb\na\nf dα = lim\nn→∞\nZb\na\nfn dα.\n(The existence of the limit is part of the conclusion.)\nProof. It suffices to prove this for real fn. Put\n(7.24)\nεn = sup |fn(x) −f(x)| ,\nthe supremum being taken over a ≤x ≤b. Then\nfn −εn ≤f ≤fn + εn,\nso that the upper and lower integrals of f (see Definition 6.2) satisfy\n(7.25)\nZb\na\n(fn −εn)dα ≤\nZ\nf dα ≤\nZ\nf dα ≤\nZb\na\n(fn + εn) dα.\nHence\n0 ≤\nZ\nf dα −\nZ\nf dα ≤2εn[α(b) −α(a)].\nSince εn →0 as n →∞(Theorem 7.9), the upper and lower integrals of f are\nequal.\nThus f ∈R(α). Another application of (7.25) now yields\n(7.26)\n\f\f\f\f\f\nZb\na\nf dα −\nZb\na\nfn dα\n\f\f\f\f\f ≤εn[α(b) −α(a)].\nThus implies (7.23).\nCorollary. If fn ∈R(α) on [a, b] and if\nf(x) =\n∞\nX\nn=1\nfn(x)\n(a ≤x ≤b),\n\nUNIFORM CONVERGENCE AND DIFFERENTIATION\n141\nthe series converging uniformly on [a, b], then\nZb\na\nf dα =\n∞\nX\nn=1\nZb\na\nfn dα.\nIn other words the series may be integrated term by term.\nUNIFORM CONVERGENCE AND DIFFERENTIATION\nWe have already seen, in Example 7.5, that uniform convergence of (fn) implies\nnothing about the sequence (f′n). Thus stronger hypotheses are required for the\nassertion that f′n →f′ if fn →f."
+    },
+    {
+      "id": "7.17",
+      "ref": "7.17",
+      "kind": "theorem",
+      "chapter": 7,
+      "title": "导数列一致收敛定理",
+      "aliases": [
+        "uniform",
+        "convergence",
+        "differentiation"
+      ],
+      "statement": "设 fₙ 在 [a,b] 上可微，对某个 x₀∈[a,b] 数列 fₙ(x₀) 收敛，且导数列 fₙ′ 在 [a,b] 上一致收敛。则 fₙ 在 [a,b] 上一致收敛到可微函数 f，并且 f′(x)=limₙ fₙ′(x)。",
+      "intuition": "中文学习表述；可通过原文按钮核对教材。",
+      "status": "reviewed",
+      "source": {
+        "pdf_page": 153,
+        "pdf_end": 154,
+        "printed_page": 141
+      },
+      "raw": "7.17 Theorem. Suppose (fn) is a sequence of functions, differentiable on [a, b] and such\nthat (fn(x0)) converges for some point x0 on [a, b]. If (f′n) converges uniformly on [a, b],\nthen (fn) converges uniformly on [a, b], to a function f, and\n(7.27)\nf′(x) = lim\nn→∞f′\nn(x)\n(a ≤x ≤b).\nProof. Let ε > 0 be given. Choose N such that n ≥N, m ≤N, implies\n(7.28)\n|fn(x0) −fm(x0)| < ε\n2\nand\n(7.29)\n\f\ff′\nn(t) −f′\nm(t)\n\f\f <\nε\n2(b −a)\n(a ≤t ≤b).\nIf we apply the mean value theorem 5.19 to the function fn −fm, (7.29) shows\nthat\n(7.30)\n|fn(x) −fm(x) −fn(t) + fm(t)| ≤|x −t| ε\n2(b −a) ≤ε\n2\nfor any x and t on [a, b], if n ≥N, m ≥N. The inequality\n|fn(x) −fm(x)| ≤|fn(x) −fm(x) −fn(x0) + fm(x0)| + |fn(x0) −fm(x0)|\nimplies, by (7.28) and (7.30), that\n|fn(x) −fm(x)| < ε\n(a ≤x ≤b, n ≥N, m ≥N),\nso that (fn) converges uniformly on [a, b]. Let\nf(x) = lim\nn→∞fn(x)\n(a ≤x ≤b).\n\nUNIFORM CONVERGENCE AND DIFFERENTIATION\n142\nLet us now fix a point x on [a, b] and define\n(7.31)\nϕn(t) = fn(t) −fn(x)\nt −x\n,\nϕ(t) = f(t) −f(x)\nt −x\nfor a ≤t ≤b, t ̸= x. Then\n(7.32)\nlim\nt→x ϕn(t) = f′\nn(x)\n(n = 1, 2, 3, . . . ).\nThe first inequality in (7.30) shows that\n|ϕn(t) −ϕm(t)| ≤\nε\n2(b −a)\n(n ≥N, m ≥N),\nso that (ϕn) converges uniformly, for t ̸= x. Since (fn) converges to f, we conclude\nfrom (7.31) that\n(7.33)\nlim\nn→∞ϕn(t) = ϕ(t)\nuniformly for a ≤t ≤b, t ̸= x.\nIf we now apply Theorem 7.11 to (ϕn), (7.32) and (7.33) show that\nlim\nt→x ϕ(t) = lim\nn→∞f′\nn(x);\nand this is (7.27), by definition of ϕ(t).\nRemark: If the continuity of the functions f′n is assumed in addition to the above\nhypotheses, then a much shorter proof of (7.27) can be based on Theorem 7.16 and\nthe fundamental theorem of calculus."
+    }
+  ],
+  "edges": [
+    {
+      "source": "1.8",
+      "target": "1.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 1.8 的表述核对：该条目使用「上界与下界」。"
+    },
+    {
+      "source": "1.10",
+      "target": "1.8",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 1.10 的表述核对：该条目使用「上确界与下确界」。"
+    },
+    {
+      "source": "1.19",
+      "target": "1.10",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 1.19 的表述核对：该条目使用「最小上界性质」。"
+    },
+    {
+      "source": "2.18.a",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "2.18.b",
+      "target": "2.18.a",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「邻域」。"
+    },
+    {
+      "source": "2.18.c",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.18.d",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.18.e",
+      "target": "2.18.a",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「邻域」。"
+    },
+    {
+      "source": "2.18.f",
+      "target": "2.18.e",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「内点」。"
+    },
+    {
+      "source": "2.18.h",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.18.h",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.18.i",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "2.18.j",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.18 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.19",
+      "target": "2.18.a",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.19 的表述核对：该条目使用「邻域」。"
+    },
+    {
+      "source": "2.19",
+      "target": "2.18.f",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.19 的表述核对：该条目使用「开集」。"
+    },
+    {
+      "source": "2.20",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.20 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.23",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.23 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.23",
+      "target": "2.18.f",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.23 的表述核对：该条目使用「开集」。"
+    },
+    {
+      "source": "2.23",
+      "target": "2.18.g",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.23 的表述核对：该条目使用「补集」。"
+    },
+    {
+      "source": "2.24",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.24 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.24",
+      "target": "2.18.f",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.24 的表述核对：该条目使用「开集」。"
+    },
+    {
+      "source": "2.26",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.26 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.31",
+      "target": "2.18.f",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.31 的表述核对：该条目使用「开集」。"
+    },
+    {
+      "source": "2.32",
+      "target": "2.31",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.32 的表述核对：该条目使用「开覆盖」。"
+    },
+    {
+      "source": "2.34",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.34 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.34",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.34 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.35",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.35 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.35",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.35 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.36",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.36 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.37",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.37 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.37",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.37 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "2.40",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.40 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.41 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.41 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.18.i",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.41 的表述核对：该条目使用「有界集」。"
+    },
+    {
+      "source": "2.42",
+      "target": "2.18.i",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.42 的表述核对：该条目使用「有界集」。"
+    },
+    {
+      "source": "2.42",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 2.42 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "3.1",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.1 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "3.2",
+      "target": "3.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.2 的表述核对：该条目使用「序列收敛」。"
+    },
+    {
+      "source": "3.5",
+      "target": "3.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.5 的表述核对：该条目使用「序列收敛」。"
+    },
+    {
+      "source": "3.6",
+      "target": "3.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.6 的表述核对：该条目使用「子序列」。"
+    },
+    {
+      "source": "3.6",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.6 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "3.8",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.8 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "3.11",
+      "target": "3.8",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.11 的表述核对：该条目使用「Cauchy 序列」。"
+    },
+    {
+      "source": "3.11",
+      "target": "3.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.11 的表述核对：该条目使用「序列收敛」。"
+    },
+    {
+      "source": "3.11",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 3.11 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "4.1",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.1 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "4.1",
+      "target": "2.18.b",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.1 的表述核对：该条目使用「聚点」。"
+    },
+    {
+      "source": "4.5",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.5 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "4.8",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.8 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "4.8",
+      "target": "2.18.f",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.8 的表述核对：该条目使用「开集」。"
+    },
+    {
+      "source": "4.14",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.14 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "4.14",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.14 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "4.15",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.15 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "4.15",
+      "target": "2.18.d",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.15 的表述核对：该条目使用「闭集」。"
+    },
+    {
+      "source": "4.15",
+      "target": "2.18.i",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.15 的表述核对：该条目使用「有界集」。"
+    },
+    {
+      "source": "4.16",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.16 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "4.16",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.16 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "4.18",
+      "target": "2.15",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.18 的表述核对：该条目使用「度量空间」。"
+    },
+    {
+      "source": "4.19",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.19 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "4.19",
+      "target": "4.18",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.19 的表述核对：该条目使用「一致连续」。"
+    },
+    {
+      "source": "4.19",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 4.19 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "5.1",
+      "target": "4.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 5.1 的表述核对：该条目使用「函数极限」。"
+    },
+    {
+      "source": "5.2",
+      "target": "5.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 5.2 的表述核对：该条目使用「导数」。"
+    },
+    {
+      "source": "5.2",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 5.2 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "5.10",
+      "target": "5.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 5.10 的表述核对：该条目使用「导数」。"
+    },
+    {
+      "source": "5.10",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 5.10 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "7.7",
+      "target": "3.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.7 的表述核对：该条目使用「序列收敛」。"
+    },
+    {
+      "source": "7.8",
+      "target": "7.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.8 的表述核对：该条目使用「一致收敛」。"
+    },
+    {
+      "source": "7.8",
+      "target": "3.8",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.8 的表述核对：该条目使用「Cauchy 序列」。"
+    },
+    {
+      "source": "7.12",
+      "target": "7.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.12 的表述核对：该条目使用「一致收敛」。"
+    },
+    {
+      "source": "7.12",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.12 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "7.13",
+      "target": "7.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.13 的表述核对：该条目使用「一致收敛」。"
+    },
+    {
+      "source": "7.13",
+      "target": "4.5",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.13 的表述核对：该条目使用「连续性」。"
+    },
+    {
+      "source": "7.13",
+      "target": "2.32",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.13 的表述核对：该条目使用「紧致集」。"
+    },
+    {
+      "source": "7.16",
+      "target": "7.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.16 的表述核对：该条目使用「一致收敛」。"
+    },
+    {
+      "source": "7.16",
+      "target": "6.2",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.16 的表述核对：该条目使用「6.2」。"
+    },
+    {
+      "source": "7.17",
+      "target": "7.7",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.17 的表述核对：该条目使用「一致收敛」。"
+    },
+    {
+      "source": "7.17",
+      "target": "5.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.17 的表述核对：该条目使用「导数」。"
+    },
+    {
+      "source": "7.17",
+      "target": "3.1",
+      "relation": "uses_definition",
+      "status": "reviewed",
+      "evidence": "按 Rudin 7.17 的表述核对：该条目使用「序列收敛」。"
+    },
+    {
+      "source": "2.34",
+      "target": "2.23",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.34 的证明使用 2.23；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.40",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.41 的证明使用 2.40；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.35",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.41 的证明使用 2.35；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "2.41",
+      "target": "2.37",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.41 的证明使用 2.37；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "2.42",
+      "target": "2.40",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.42 的证明使用 2.40；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "2.42",
+      "target": "2.37",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 2.42 的证明使用 2.37；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "3.6",
+      "target": "2.37",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 3.6 的证明使用 2.37；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "3.6",
+      "target": "2.20",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 3.6 的证明使用 2.20；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "3.6",
+      "target": "2.41",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 3.6 的证明使用 2.41；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "4.14",
+      "target": "4.8",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 4.14 的证明使用 4.8；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "4.15",
+      "target": "4.14",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 4.15 的证明使用 4.14；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "4.15",
+      "target": "2.34",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 4.15 的证明使用 2.34；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "4.15",
+      "target": "2.41",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 4.15 的证明使用 2.41；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "4.16",
+      "target": "4.15",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 4.16 的证明使用 4.15；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.12",
+      "target": "7.11",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.12 的证明使用 7.11；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.13",
+      "target": "4.8",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.13 的证明使用 4.8；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.13",
+      "target": "2.35",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.13 的证明使用 2.35；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.13",
+      "target": "2.36",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.13 的证明使用 2.36；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.17",
+      "target": "5.19",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.17 的证明使用 5.19；点击原文核对证明中的调用。"
+    },
+    {
+      "source": "7.17",
+      "target": "7.8",
+      "relation": "depends_on",
+      "status": "reviewed",
+      "evidence": "教材 7.17 的证明使用 7.8；点击原文核对证明中的调用。"
+    }
+  ]
+}
